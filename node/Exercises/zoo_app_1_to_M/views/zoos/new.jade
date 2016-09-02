@@ -1,0 +1,7 @@
+extends ../layout.jade
+
+block content
+  h1 Add a new zoo
+
+  form(action="/owners/#{owner.id}/zoos/" method="POST")
+    include _form

@@ -1,0 +1,8 @@
+build
+.gradle
+*.class
+.idea/
+Unit-5-junit/.idea/
+Unit-5-junit/gradle/
+Unit-5-junit/gradlew
+Unit-5-junit/gradlew.bat

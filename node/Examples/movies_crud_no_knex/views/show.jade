@@ -1,0 +1,14 @@
+extends ./layout.jade
+
+block content
+  h1.text-center Information on Movie #{movie.id}
+  .panel.panel-info
+    .panel-heading= movie.title
+    .panel-body
+      h4= movie.description
+      h6 Rating: #{movie.rating}
+    .panel-footer
+      a.btn.btn-warning(href='/movies/#{movie.id}/edit') Edit
+      form(action="/movies/#{movie.id}?_method=delete" method="POST")
+        input.btn.btn-danger(type="submit" value="Delete")
+      a.btn.btn-primary(href='/movies') Go Back

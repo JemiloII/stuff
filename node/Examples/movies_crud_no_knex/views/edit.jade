@@ -1,0 +1,19 @@
+extends ./layout.jade
+
+block content
+  h1.text-center Edit a Movie
+  form.jumbotron(action="/movies/#{movie.id}?_method=put" method="POST")
+    .form-group
+      label(for="title")
+      input.form-control(type="text" name="movie[title]" id="title" placeholder="Enter the movie title." value="#{movie.title}")
+    .form-group
+      label(for="description")
+      input.form-control(type="text" name="movie[description]" id="description" placeholder="Enter the movie description." value="#{movie.description}")
+    .form-group
+      label(for="rating")
+      input.form-control(type="number" name="movie[rating]" id="rating" placeholder="How would you rate this movie from 1 to 10?" value="#{movie.rating}")
+    .row
+      .col-sm-6
+        input.btn.btn-primary.btn-block(type="submit" value="Update this movie!")
+      .col-sm-6
+        a.btn.btn-warning.btn-block(href='/movies') Never mind, go back

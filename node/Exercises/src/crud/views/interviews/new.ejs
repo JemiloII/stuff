@@ -1,0 +1,39 @@
+<%- contentFor('body') %>
+
+<h1>New Interview</h1>
+
+<form action="/interviews" method="post">
+  <p>
+    <label for="candidate">Candidate</label>
+    <input type="text" name="candidate" id="candidate">
+  </p>
+  <p>
+    <label>
+      <input type="checkbox" name="passed" checked="checked">
+      Passed
+    </label>
+  </p>
+  <p>
+    <label for="position">Position</label>
+    <select name="position" id="position">
+      <option value="sr-developer">Senior Developer</option>
+      <option value="jr-developer">Junior Developer</option>
+    </select>
+  </p>
+  <p>
+    <span>Language</span>
+
+    <label>
+      <input type="radio" name="language" value="ruby">
+      Ruby
+    </label>
+    <label>
+      <input type="radio" name="language" value="javascript">
+      JavaScript
+    </label>
+  </p>
+  <p>
+    <input type="submit" value="Save" name="save">
+    <button type="submit" name="save-and-new">Save And New</button>
+  </p>
+</form>

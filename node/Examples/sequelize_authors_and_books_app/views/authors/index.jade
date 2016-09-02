@@ -1,0 +1,40 @@
+extends ../layout.jade
+
+block title
+  title Authors
+
+block content
+  h1 See all the authors!
+  h4
+    a(href="/authors/new") Add a new author
+
+  each author in authors
+    h2 #{author.name}, #{author.age}
+
+    p
+      a(href="/authors/#{author.id}")
+        span
+          i.glyphicon.glyphicon-search
+          span  See some more about #{author.name}
+
+    p
+      a(href="/authors/#{author.id}/books")
+        span
+          i.glyphicon.glyphicon-book
+          span  See #{author.name}'s books
+    p
+      a(href="/authors/#{author.id}/books/new")
+        span
+          i.glyphicon.glyphicon-plus
+          span  Add a new book
+
+    a(href="/authors/#{author.id}/edit", class="btn btn-info") Edit this author
+
+    form(action="/authors/#{author.id}?_method=delete", method="POST")
+      input(type="submit" value="Delete this author" class="btn btn-danger")
+
+
+
+
+
+

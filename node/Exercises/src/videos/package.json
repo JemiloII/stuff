@@ -1,0 +1,17 @@
+{
+  "name": "videos",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "dropdb --if-exists node-curriculum-videos && createdb node-curriculum-videos && node queries.js",
+    "prep": "dropdb --if-exists node-curriculum-videos && createdb node-curriculum-videos && node prep.js"
+  },
+  "keywords": [],
+  "author": "Galvanize <info@galvanize.com>",
+  "license": "ISC",
+  "dependencies": {
+    "knex": "^0.11.10",
+    "pg": "^6.1.0"
+  }
+}

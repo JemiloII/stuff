@@ -1,0 +1,10 @@
+extends ../layout.jade
+
+block content
+  h1 #{owner.name} Zoos
+  a(href="/owners/#{owner.id}/zoos/new") New zoo
+  p
+    a(href="/owners/") See all owners
+  each zoo in zoos
+    p= zoo.name
+    a(href="/owners/#{owner.id}/zoos/#{zoo.id}/edit") Edit this zoo

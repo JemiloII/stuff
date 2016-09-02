@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <a href="/cats/new">Make a new cat</a>
+  <h1>See all the cats</h1>
+
+  <% cats.forEach(function(cat){ %>
+  <p>
+    <%= cat.name%>
+    <a href="/cats/<%= cat.id%>">Show some info about this cat</a>
+    <a href="/cats/<%= cat.id%>/edit">Edit this cat</a>
+    <form action="/cats/<%= cat.id%>?_method=DELETE" method="POST">
+      <input type="submit" value="X">
+    </form>
+  </p>
+  <% })%>
+</body>
+</html>

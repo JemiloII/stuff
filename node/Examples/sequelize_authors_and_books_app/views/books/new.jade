@@ -1,0 +1,16 @@
+extends ../layout.jade
+
+block title
+  title Add a new book
+
+block content
+  h1 Add a new book
+  form(action="/authors/#{id}/books", method="POST")
+    p
+      label(for="title") Title: &nbsp;
+      input(type ="text" name="book[title]" id="title" autofocus)
+    p
+      label(for="genre") Genre: &nbsp;
+      input(type ="text" name="book[genre]" id="genre")
+    input(type="submit" value="Save" class="btn btn-success")
+

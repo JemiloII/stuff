@@ -1,0 +1,13 @@
+extends ./layout.jade
+
+block content
+  h1.text-center Here are some sweet movies.
+  ul.list-group
+    each movie in movies
+      li.list-group-item.list-group-item-info
+        h4= movie.title
+        form.pull-right(action="/movies/#{movie.id}?_method=delete" method="POST")
+            input.btn.btn-danger(type="submit" value="Delete")
+        a.btn.btn-warning.pull-right(href='/movies/#{movie.id}/edit') Edit
+        a.btn.btn-primary.pull-right(href='/movies/#{movie.id}') Show
+  a.btn.btn-success(href='/movies/new') Add Movie

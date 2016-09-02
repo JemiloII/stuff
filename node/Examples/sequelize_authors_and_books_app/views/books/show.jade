@@ -1,0 +1,16 @@
+extends ../layout.jade
+
+block title
+  title See #{book.title}
+
+block content
+
+    <p> A little info about our book!
+      <br>
+      Title: <%= book.title%>
+      <br>
+      Genre: <%= book.genre%>
+    </p>
+
+  <a href="/books">Go home</a>
+

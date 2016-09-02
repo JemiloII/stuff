@@ -1,0 +1,13 @@
+.list-group h4 {
+  display: inline-block;
+}
+
+.list-group .btn {
+  margin: 0 5px;
+}
+
+.panel-footer .btn,
+.panel-footer form {
+  display: inline-block;
+  margin: 0 5px;
+}

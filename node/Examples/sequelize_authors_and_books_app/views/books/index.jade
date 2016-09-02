@@ -1,0 +1,18 @@
+extends ../layout.jade
+
+block title
+  title #{author.name}'s Books
+
+block content
+  a(href="/authors")
+    i(class="glyphicon glyphicon-pencil")
+    span See all authors
+
+  each book in books
+    h3 Title: #{book.title}, Genre: #{book.genre}
+    a(href="/authors/#{book.AuthorId}/books/#{book.id}/edit" class="btn btn-info") Edit this book
+    form(action="/authors/#{book.AuthorId}/books/#{book.id}?_method=delete" method="post")
+      input(type="submit" value="Delete this book" class="btn btn-danger")
+
+
+

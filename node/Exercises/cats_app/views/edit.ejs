@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+
+  <h1>Edit <%= cat.name%></h1>
+
+  <form action="/cats/<%= cat.id%>?_method=PATCH" method="POST">
+    <input type="text" name="name" value="<%= cat.name%>">
+    <input type="text" name="age" value="<%= cat.age%>">
+    <input type="submit" value="Edit this cat">
+  </form>
+
+</body>
+</html>

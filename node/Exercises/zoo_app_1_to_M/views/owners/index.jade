@@ -1,0 +1,13 @@
+extends ../layout.jade
+
+block content
+  h1 All owners
+  a(href="/owners/new") Add a new owner
+  each owner in owners
+    p= owner.name
+    p
+      a(href="/owners/#{owner.id}/zoos") See #{owner.name}'s zoos
+    p
+      a(href="/owners/#{owner.id}/zoos/new") Make a new zoo for #{owner.name}
+    p
+      a(href="/owners/#{owner.id}/edit") Edit this owner

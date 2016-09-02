@@ -1,0 +1,16 @@
+extends ../layout.jade
+
+block title
+  title Edit #{book.title}
+
+block content
+  h1 Edit a book
+  form(action="/authors/#{book.AuthorId}/books/#{book.id}?_method=put", method="POST")
+    p
+      label(for="title") Title: &nbsp;
+      input(type ="text" name="book[title]" id="title" autofocus value=book.title)
+    p
+      label(for="genre") Genre: &nbsp;
+      input(type ="text" name="book[genre]" id="genre" value=book.genre)
+    input(type="submit" value="Save" class="btn btn-success")
+
