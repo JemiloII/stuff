@@ -22,7 +22,7 @@ We've also examined a couple types of relationships / associations between table
   - a book belongs to an author
 3. Many to Many
   - many students take many courses
-  - many courses have many courses
+  - many courses have many students
 
 ## Adding a foreign key in a knex migration
 
